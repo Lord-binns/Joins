@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/1721117447741-F01KM3OIALJXD1KVWO16/22.gif?format=500w'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333; /* Dark gray */
+    margin: 0;
+    padding: 0;
+}
+
+/* Card Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    border: 1px solid rgba(221, 221, 221, 0.8); /* Light gray border with 80% opacity */
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    flex: 1 1 calc(33.33% - 20px);
+    min-width: 280px;
+    backdrop-filter: blur(5px); /* Adds a subtle blur effect */
+}
+
+/* Card Header */
+.card-header {
+    background-color: rgba(74, 144, 226, 0.9); /* Muted blue with 90% opacity */
+    color: #ffffff; /* White text */
+    padding: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.table thead th {
+    background-color: rgba(240, 240, 240, 0.8); /* Very light gray with 80% opacity */
+    color: #333; /* Dark gray */
+    padding: 10px;
+    text-align: center;
+}
+
+.table tbody td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid rgba(224, 224, 224, 0.8); /* Light gray with 80% opacity */
+}
+
+/* Form Controls */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    color: #333; /* Dark gray */
+    border: 1px solid rgba(204, 204, 204, 0.8); /* Light gray with 80% opacity */
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 0.95rem;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: rgba(74, 144, 226, 0.9); /* Muted blue with 90% opacity */
+    color: #ffffff; /* White */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: rgba(58, 123, 196, 0.9); /* Slightly darker blue */
+}
