@@ -19,33 +19,6 @@ class Database {
         return $this->conn;
     }
 
-    public function getUserProfile($user_id) {
-        $sql = "
-            SELECT 
-                users.id AS user_id, 
-                users.first_name, 
-                users.last_name, 
-                users.username, 
-                profiles.date_of_birth, 
-                profiles.address, 
-                profiles.phone_number, 
-                profiles.bio 
-            FROM users 
-            LEFT JOIN profiles ON users.id = profiles.user_id
-            WHERE users.id = ?
-        ";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("i", $user_id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-    
-        if ($result->num_rows > 0) {
-            return $result->fetch_assoc();
-        } else {
-            return null;
-        }
-    }
-    
 
 // Existing getUsersWithProfiles() with LEFT JOIN
 public function getUsersWithProfiles() {
@@ -75,7 +48,6 @@ public function getUsersWithProfiles() {
     }
 }
 
-// New method for INNER JOIN
 public function getUsersWithProfilesInnerJoin() {
     $sql = "
         SELECT 
@@ -89,7 +61,12 @@ public function getUsersWithProfilesInnerJoin() {
             profiles.bio 
         FROM users 
         INNER JOIN profiles ON users.id = profiles.user_id
+        WHERE 
+            users.first_name IS NOT NULL AND users.first_name != ''
+        AND users.last_name IS NOT NULL AND users.last_name != ''
+        AND profiles.bio IS NOT NULL AND profiles.bio != ''
     ";
+
     $result = $this->conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -102,5 +79,7 @@ public function getUsersWithProfilesInnerJoin() {
         return [];
     }
 }
+
+
 
 }

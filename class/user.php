@@ -41,10 +41,37 @@ class User extends Database {
         $stmt->bind_param("ssss", $first_name, $last_name, $username, $hashed_password);
 
         if ($stmt->execute()) {
+            // Get the ID of the newly inserted user
+            $user_id = $stmt->insert_id;
+
+            // After successful user registration, insert into profiles table with default (NULL) values
+            $this->insertDefaultProfile($user_id);
+            
             return true; // Registration successful
         } else {
             $this->error = $stmt->error; // Capture any error
             return false; // Registration failed
+        }
+    }
+
+    // Method to insert default profile data for the new user
+    private function insertDefaultProfile($user_id) {
+        // Insert default profile with NULL values for date_of_birth, address, phone_number, and bio
+        $sql = "INSERT INTO profiles (user_id, date_of_birth, address, phone_number, bio) 
+                VALUES (?, NULL, NULL, NULL, NULL)";
+        
+        $stmt = $this->conn->prepare($sql);
+        if (!$stmt) {
+            die("Error preparing insert profile statement: " . $this->conn->error);
+        }
+        
+        $stmt->bind_param("i", $user_id);
+        if ($stmt->execute()) {
+            // Profile inserted successfully
+            return true;
+        } else {
+            $this->error = $stmt->error; // Capture any error
+            return false;
         }
     }
 

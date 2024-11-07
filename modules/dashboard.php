@@ -9,14 +9,16 @@ $usersWithProfilesInnerJoin = $db->getUsersWithProfilesInnerJoin(); // Uses INNE
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profiles</title>
+    <title>Dash Board</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../CSS/dashboard.css">
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -29,10 +31,10 @@ $usersWithProfilesInnerJoin = $db->getUsersWithProfilesInnerJoin(); // Uses INNE
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../class/user_profiles.php">Profiles</a>
+                        <a class="nav-link" href="../class/user_profiles.php"><i class="fas fa-users"></i> Profiles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../modules/login.php">
+                        <a class="nav-link" href="../modules/login.php" onclick="return confirmLogout()">
                             <i class="fas fa-power-off"></i> Logout
                         </a>
                     </li>
@@ -40,6 +42,12 @@ $usersWithProfilesInnerJoin = $db->getUsersWithProfilesInnerJoin(); // Uses INNE
             </div>
         </div>
     </nav>
+
+    <script>
+        function confirmLogout() {
+            return confirm("Are you sure you want to log out?");
+        }
+    </script>
 
     <div class="container mt-5">
         <h1>User Profiles - LEFT JOIN</h1>
@@ -123,4 +131,5 @@ $usersWithProfilesInnerJoin = $db->getUsersWithProfilesInnerJoin(); // Uses INNE
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

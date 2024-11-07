@@ -1,16 +1,25 @@
 /* General Styles */
 body {
+    background-image: url('https://4kwallpapers.com/images/wallpapers/peach-cat-kawaii-5120x2880-10081.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
     background-color: #f8f5f5; /* Light red background */
     color: #333;
 }
 
-h1 {
-    color: #e60b0b; /* Dark red */
+
+.table-title {
+    font-size: 1.5rem;
     font-weight: bold;
+    color: #da3c07; /* Rich purple color */
     text-align: center;
-    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #ddd;
 }
+
 
 /* Card Styling */
 .card {
@@ -42,7 +51,7 @@ h1 {
 }
 
 .table thead th {
-    background-color: #000000; /* Dark red header */
+    background-color: #a60404; /* Dark red header */
     color: white;
     text-align: center;
     padding: 12px;

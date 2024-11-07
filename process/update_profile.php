@@ -16,7 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("ssssi", $date_of_birth, $address, $phone_number, $bio, $user_id);
 
     if ($stmt->execute()) {
-        echo "Profile updated successfully.";
+        // Redirect back to user_profiles.php after successful update
+        header("Location: ../class/user_profiles.php");
+        exit();
     } else {
         echo "Error updating profile: " . $stmt->error;
     }

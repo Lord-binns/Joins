@@ -33,13 +33,21 @@ $usersWithProfiles = $db->getUsersWithProfiles(); // Fetch all users with their 
                         <a class="nav-link" href="../class/user_profiles.php"><i class="fas fa-users"></i> Profiles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../modules/login.php"><i class="fas fa-power-off"></i> Logout</a>
+                        <a class="nav-link" href="../modules/login.php" onclick="return confirmLogout()">
+                            <i class="fas fa-power-off"></i> Logout
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <script>
+        function confirmLogout() {
+            return confirm("Are you sure you want to log out?");
+        }
+    </script>
+    
     <h1 style="text-align: center;">User Profiles</h1>
 
     <div class="cards-container">

@@ -1,11 +1,11 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/1721117447741-F01KM3OIALJXD1KVWO16/22.gif?format=500w'); /* Replace with your image path */
+    background-image: url('https://wallpapercg.com/media/ts_2x/10594.webp'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #333; /* Dark gray */
+    color: #090606; /* Dark gray */
     margin: 0;
     padding: 0;
 }
@@ -24,9 +24,9 @@ body {
 /* Card Styling */
 .card {
     background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
-    border: 1px solid rgba(221, 221, 221, 0.8); /* Light gray border with 80% opacity */
+    border: 1px solid rgba(16, 2, 2, 0.8); /* Light gray border with 80% opacity */
     border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 12px rgba(245, 5, 5, 0.1);
     padding: 15px;
     flex: 1 1 calc(33.33% - 20px);
     min-width: 280px;
@@ -35,8 +35,8 @@ body {
 
 /* Card Header */
 .card-header {
-    background-color: rgba(74, 144, 226, 0.9); /* Muted blue with 90% opacity */
-    color: #ffffff; /* White text */
+    background-color: rgba(236, 232, 230, 0.9); /* Muted blue with 90% opacity */
+    color: #020101; /* White text */
     padding: 10px;
     font-size: 1.25rem;
     font-weight: bold;
@@ -53,8 +53,8 @@ body {
 }
 
 .table thead th {
-    background-color: rgba(240, 240, 240, 0.8); /* Very light gray with 80% opacity */
-    color: #333; /* Dark gray */
+    background-color: rgba(198, 30, 30, 0.8); /* Very light gray with 80% opacity */
+    color: #0b0202; /* Dark gray */
     padding: 10px;
     text-align: center;
 }
@@ -68,7 +68,7 @@ body {
 /* Form Controls */
 .form-control {
     background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
-    color: #333; /* Dark gray */
+    color: #be1313; /* Dark gray */
     border: 1px solid rgba(204, 204, 204, 0.8); /* Light gray with 80% opacity */
     border-radius: 4px;
     padding: 6px;
