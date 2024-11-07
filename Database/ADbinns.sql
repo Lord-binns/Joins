@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2024 at 04:28 PM
+-- Generation Time: Nov 07, 2024 at 05:14 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -44,7 +44,8 @@ INSERT INTO `profiles` (`profile_id`, `user_id`, `date_of_birth`, `address`, `ph
 (31, 5, '1995-03-20', '789 Oak St', '555-123-4567', 'I am Bin.'),
 (32, 7, '1994-02-15', '123 Maple Ave', '555-987-6543', 'Hello, I\'m Bella'),
 (33, 8, '1996-05-05', '456 Pine St', '555-555-5555', 'This is Qwe\'s bio'),
-(34, 9, '1997-07-07', '987 Cedar St', '555-444-3333', 'Red\'s profile here');
+(34, 9, '1997-07-07', '987 Cedar ty', '555-444-3333', 'Red\'s profile here'),
+(36, 11, NULL, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -66,12 +67,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `password`, `created_at`) VALUES
-(1, 'binns', 'binns', 'binns', '$2y$10$Ac0PgE5CBjy/kSKXIXQCJOVZecTOsMqY0iFAnSJLJTvzPe06XZ38S', '2024-10-25 03:15:51'),
-(4, 'kenneth', 'kenneth', 'kenneth', '$2y$10$Py8gfa9TRb7upJq0/jdtROxHmmyFCgeUM9.jD2ray8Jh39snPiuky', '2024-11-02 11:09:36'),
 (5, 'bin', 'bin', 'bin', '$2y$10$gMr/Z4Gsox29KgZEXR5WduA0YiBVFYO/geWtnkI5/xFvwoPhtUv/.', '2024-11-02 15:02:07'),
 (7, 'bella', 'bella', 'bella', '$2y$10$fKOqMPwMUt.e5B.ZUJF/E.99nLGEJXVtsBu9w07XbFUWEagMULO.i', '2024-11-04 00:50:36'),
 (8, 'qwe', 'qwe', 'qwe', '$2y$10$6AEDaAReOPYj2dhyz.wdRuIAV1T5GMNSS8gPAzBXGlqML.RDYVIpK', '2024-11-04 14:57:52'),
-(9, 'red', 'red', 'red', '$2y$10$Mmal9YtgO8rNUab6FL1gn.sN7gYnH22Dix2Aqa3q8y4tAs10HouAi', '2024-11-04 15:29:58');
+(9, 'red', 'red', 'red', '$2y$10$Mmal9YtgO8rNUab6FL1gn.sN7gYnH22Dix2Aqa3q8y4tAs10HouAi', '2024-11-04 15:29:58'),
+(11, 'binns', 'binns', 'binns', '$2y$10$dtUC3973jobktK9Nz6zQa.o88IiPpet.lwAq8PdiuNGoaphsrwRjO', '2024-11-07 15:58:53');
 
 --
 -- Indexes for dumped tables
@@ -99,13 +99,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `profiles`
 --
 ALTER TABLE `profiles`
-  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
